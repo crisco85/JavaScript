@@ -102,10 +102,10 @@ function Calculadora(mCantidadDias)
 }
 
 
-let mNombre = prompt("Buenos dias viajero, cual es tu nombre?")
+/* let mNombre = prompt("Buenos dias viajero, cual es tu nombre?")
 let mApellido = prompt("Cual es tu apellido?")
 let mEdad = Number(prompt("Cual es tu edad? "))
-
+ */
 class Persona {
     constructor(pNombre, pApellido, pEdad) {
         this.Nombre = pNombre;
@@ -125,8 +125,8 @@ class Persona {
     }
 
 const mPersona = new Persona(mNombre, mApellido, mEdad);
-mPersona.SaludarViajero(mNombre, mEdad);
-mPersona.Mensaje(mNombre);
+//mPersona.SaludarViajero(mNombre, mEdad);
+//mPersona.Mensaje(mNombre);
 
 
 let mCotizador = []
@@ -160,7 +160,7 @@ class Viaje {
     }
 }
 
-let mId = Number(prompt("Por favor ingrese un nro para registrar la cotización de su viaje: "));
+/* let mId = Number(prompt("Por favor ingrese un nro para registrar la cotización de su viaje: "));
 let mDestino = prompt("Ingreso su destino: ");
 let mCantidad = Number(prompt("Ingrese la cantidad de pasajeros"));
 
@@ -170,14 +170,14 @@ let mId2 = Number(prompt("Por favor ingrese un nro para registrar la cotización
 let mDestino2 = prompt("Ingreso su destino2: ");
 let mCantidad2 = Number(prompt("Ingrese la cantidad de pasajeros para este viaje: "));
 
-const mViaje2 = new Viaje(mId2, mDestino2, mCantidad2, 3000);
+const mViaje2 = new Viaje(mId2, mDestino2, mCantidad2, 3000); */
 
 
-let viajes = [mViaje1, mViaje2];
+/* let viajes = [mViaje1, mViaje2];
 
-console.log(mCotizador);
+//console.log(mCotizador);
 mViaje1.addToCotizador(mCantidad);
-console.log(mCotizador);
+//console.log(mCotizador);
 mViaje2.addToCotizador(mCantidad2);
 
 let nuevoArrayViajes = viajes.map(viaje => {
@@ -186,4 +186,4 @@ let nuevoArrayViajes = viajes.map(viaje => {
 })
 
 console.log(nuevoArrayViajes);
-
+ */

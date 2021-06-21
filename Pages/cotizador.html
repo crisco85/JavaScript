@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayudanos a conocer lugares a los cuales viajar, comparti tus experiencias, videos, fotos e historia, para que que cada vez más viajeros conozcan nuestro Planeta">
+    <meta name="keywords" content="CONTACTO, AYUDANOS, DESCUBRIR, COMPARTIR, FOTOS, VIDEOS, VIAJES, EXPERIENCIAS">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Rincones de nuestro Planeta - Contacto</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="">
+                    <img class="logo" width="100%" height="90%" src="../Imagenes/MundoII.png" alt="Logo">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navColapsable">
+                    <span class="navbar-toggler-icon"></span>>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navColapsable">
+                    <ul class="nav nav-tabs ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="continentes.html">Continentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paises.html">Paises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ciudades.html">Ciudades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experiencias.html">Experiencias</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="cotizador.html">Cotizador de Viaje</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="contacto">
+        <div>
+            <h1> <strong> Cotizador </strong></h1>
+        </div>
+
+        <section>
+            <div>
+                <h2>Te ayudamos con la cotización de tu viaje</h2>
+            </div>    
+
+            <form class="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto">
+                            <div>
+                                <label for="name">Ingrese su nombre: </label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div>
+                                <label for="apellido">Ingrese su apellido: </label>
+                                <input type="text" name="apellido" id="apellido">
+                            </div>
+                            <div>
+                                <label for="email">Ingrese su email: </label>
+                                <input type="text" name="email" id="email">
+                            </div>
+                        <div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="formtitulo">
+                                <h3>Que te gustaria compartir?</h3>
+                            </div>
+                            <div>
+                                <label for="opcion">Fotos </label>
+                                <input type="radio" name="opcion" id="foto">
+                                <label for="opcion">Videos </label>
+                                <input type="radio" name="opcion" id="video">
+                                <label for="opcion">Historia </label>
+                                <input type="radio" name="opcion" id="historia">
+                            </div>
+                        <div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="formtitulo">
+                                <h3>Cuál fue tu principal medio de transporte?</h3>
+                            </div>
+                            <div>
+                                <label for="transporte">Tipo de transporte principal: </label>
+                                <select name="Transportes">
+                                    <option value="Avion">Avion</option>
+                                    <option value="Omnibus">Omnibus</option>
+                                    <option value="Tren">Tren</option>
+                                    <option value="Barco">Barco</option>
+                                </select>
+                            </div>
+                        <div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto">
+                            <div>
+                                <h3>Que tipo de viaje realizaste?</h3>
+                            </div>
+                            <div>
+                                <label for="ocio">Ocio </label>
+                                <input type="checkbox" name="ocio" value="1">
+                                <label for="negocio">Negocios </label>
+                                <input type="checkbox" name="negocio" value="1">
+                            </div>
+                        <div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto">
+                            <div>
+                                <button type="submit">Enviar</button>
+                                <button type="reset">Limpiar Formulario</button>
+                            </div>
+                        <div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+              </div>
+              <div class="col-sm">
+                    <ul class="redesfooter">
+                        <li><a href="https://www.facebook.com/"><img class="facebook" width="30" src="../Imagenes/facebook.svg" alt="Facebook"></a></li>
+                        <li><a href="https://www.youtube.com/"><img class="youtube" width="30" src="../Imagenes/youtube.svg" alt="YouTube"></a></li>
+                        <li><a href="https://www.instagram.com/?hl=es-la"><img class="instagram" width="30" src="../Imagenes/instagram.svg" alt="Instagram"></a></li>
+                        <li><a href="https://ar.linkedin.com"><img class="Linkedin" width="30" src="../Imagenes/linkedin.svg" alt="Instagram"></a></li>
+                    </ul>
+              </div>
+              <div class="col">
+              </div>
+            </div>
+        </div>
+        
+        <div class="footertexto">
+            Cristian A Correa
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script></body>
+</html>
