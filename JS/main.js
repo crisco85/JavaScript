@@ -124,7 +124,7 @@ class Persona {
             }
     }
 
-const mPersona = new Persona(mNombre, mApellido, mEdad);
+//const mPersona = new Persona(mNombre, mApellido, mEdad);
 //mPersona.SaludarViajero(mNombre, mEdad);
 //mPersona.Mensaje(mNombre);
 
@@ -187,3 +187,17 @@ let nuevoArrayViajes = viajes.map(viaje => {
 
 console.log(nuevoArrayViajes);
  */
+
+
+let mNombre = document.querySelector('#nombre');
+
+
+
+let mApellido = document.querySelector('#apellido');
+
+mNombre.addEventListener('keyup', function () 
+    {
+    console.log(nombre.value)
+    }) 
+
+   
