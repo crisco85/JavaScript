@@ -31,6 +31,8 @@ function Mensaje(mNombre, mContinente)
     alert(mMsg);
 }
 */
+
+/* 
 function Calculadora(mCantidadDias)
 {
     let mContador = 0;
@@ -52,18 +54,6 @@ function Calculadora(mCantidadDias)
             mContador =  mContador + 10;
         }
 
-       /*switch(mTipoAlojamiento)
-        {
-            case "Hotel":
-                    mContador = mContador +  25
-
-            case "Hostel":
-                    mContador = mContador + 15
-                
-
-            case "Otro":
-                    mContador =  mContador + 10
-        }*/
     }
     else
     {
@@ -82,26 +72,15 @@ function Calculadora(mCantidadDias)
             mContador =  mContador + 10;
         }
 
-        /*switch(mTipoAlojamiento)
-        {
-            case "Hotel":
-                    mContador = mContador +  25
-
-            case "Hostel":
-                    mContador = mContador +  15
-
-            case "Otro":
-                    mContador = mContador +  10
-                break
-        }*/
+        
     }
 
     mContador = mContador * mCantidadDias;
 
     alert("El Costo aproximado de tu viaje seria :" + mContador.toString());
 }
-
-
+ */
+/* 
 let mNombre = prompt("Buenos dias viajero, cual es tu nombre?")
 let mApellido = prompt("Cual es tu apellido?")
 let mEdad = Number(prompt("Cual es tu edad? "))
@@ -186,4 +165,33 @@ let nuevoArrayViajes = viajes.map(viaje => {
 })
 
 console.log(nuevoArrayViajes);
+ */
 
+
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+let mNombre = document.querySelector('#nombre')
+    mNombre.addEventListener('keyup', function() 
+    {
+        console.log(mNombre.value)
+    })
+
+let mApellido = document.querySelector('#apellido')
+    mApellido.addEventListener('keyup', function() 
+    {
+        console.log(mApellido.value)
+    })
+
+let mEdad = document.querySelector('#edad')
+    mEdad.addEventListener('keyup', function() 
+    {
+        console.log(mEdad.value)
+    })
+
+let btnCargar = document.querySelector('button');
+
+btnCargar.addEventListener('click', function(event)
+    {
+        event.preventDefault()
+    }
+)
