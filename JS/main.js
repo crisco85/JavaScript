@@ -238,15 +238,4 @@ btnCargar.addEventListener('click', function(event)
 )
 
 
-/* let visual = document.createElement("ul")
 
-users.forEach(user => {
-    visual.innerHTML = `${visual.innerHTML}<li>
-                        <h3>  Usuario: ${user.nombre}</h3>
-                        <h3> $ ${user.apellido}</h3>
-                        </li>`
-    
-
-})
-
-document.body.appendChild(visual) */
