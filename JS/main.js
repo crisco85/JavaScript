@@ -170,28 +170,83 @@ console.log(nuevoArrayViajes);
 
 /**+++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-let mNombre = document.querySelector('#nombre')
-    mNombre.addEventListener('keyup', function() 
-    {
-        console.log(mNombre.value)
+//localStorage.clear();
+
+function getLocalStorage(key){
+    return JSON.parse(localStorage.getItem(key))
+}
+
+function saveInLocalStorage(key,item){
+    let stringfieldItem = JSON.stringify(item)
+    localStorage.setItem(key,stringfieldItem)
+}
+
+function Saludo(){
+    let visual = document.createElement("ul")
+
+    users.forEach(user => {
+    visual.innerHTML = `${visual.innerHTML}<li>
+                        <h3>  Usuario: ${user.nombre}</h3>
+                        <h3> Apellido: ${user.apellido}</h3>
+                        </li>`
     })
 
-let mApellido = document.querySelector('#apellido')
-    mApellido.addEventListener('keyup', function() 
+    document.body.appendChild(visual)
+}
+
+let users = [];
+
+users = getLocalStorage('users') || []
+
+console.log(users);
+
+let nombre = document.querySelector('#nombre')
+nombre.addEventListener('keyup', function() 
     {
-        console.log(mApellido.value)
+        console.log(nombre.value)
     })
 
-let mEdad = document.querySelector('#edad')
-    mEdad.addEventListener('keyup', function() 
+let apellido = document.querySelector('#apellido')
+apellido.addEventListener('keyup', function() 
     {
-        console.log(mEdad.value)
+        console.log(apellido.value)
     })
 
-let btnCargar = document.querySelector('button');
+let edad = document.querySelector('#edad')
+edad.addEventListener('keyup', function() 
+    {
+        console.log(Number(edad.value))
+    })
+
+let btnCargar = document.querySelector('#buttoncargar')
 
 btnCargar.addEventListener('click', function(event)
     {
         event.preventDefault()
+
+        let user = {
+            nombre: nombre.value,
+            apellido: apellido.value,
+            edad: Number(edad.value)
+        }
+
+        users.push(user)
+        saveInLocalStorage('users', users)
+
+        Saludo()
     }
 )
+
+
+/* let visual = document.createElement("ul")
+
+users.forEach(user => {
+    visual.innerHTML = `${visual.innerHTML}<li>
+                        <h3>  Usuario: ${user.nombre}</h3>
+                        <h3> $ ${user.apellido}</h3>
+                        </li>`
+    
+
+})
+
+document.body.appendChild(visual) */
