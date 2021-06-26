@@ -194,6 +194,10 @@ function Saludo(){
     document.body.appendChild(visual)
 }
 
+function ValorizarEntidad(e){
+    console.log(e.target.value)
+}
+
 let users = [];
 
 users = getLocalStorage('users') || []
@@ -201,22 +205,13 @@ users = getLocalStorage('users') || []
 console.log(users);
 
 let nombre = document.querySelector('#nombre')
-nombre.addEventListener('keyup', function() 
-    {
-        console.log(nombre.value)
-    })
+nombre.addEventListener('change', ValorizarEntidad)
 
 let apellido = document.querySelector('#apellido')
-apellido.addEventListener('keyup', function() 
-    {
-        console.log(apellido.value)
-    })
+apellido.addEventListener('change', ValorizarEntidad)
 
 let edad = document.querySelector('#edad')
-edad.addEventListener('keyup', function() 
-    {
-        console.log(Number(edad.value))
-    })
+edad.addEventListener('change', ValorizarEntidad)
 
 let btnCargar = document.querySelector('#buttoncargar')
 
