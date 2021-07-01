@@ -1,9 +1,6 @@
 /* Cotizador de presupuesto para viajeros */
-/*
-let mNombre = prompt("Buenos dias viajero, cual es tu nombre?")
-let mEdad = Number(prompt("Cual es tu edad? "))
 
-SaludarViajero();
+/* SaludarViajero();
 
 let mContinente = prompt("Cual es el principal continente en el cual esta interesado en viajar? (Europa / America / Asia / Africa / Oceania)");
 
@@ -12,8 +9,7 @@ Mensaje(mNombre, mContinente);
 let mCantidadDias = Number(prompt("De cuantos dias seria tu viaje? "));  
 let mTipoTranporte = prompt("Cual seria tu principal medio de transporte? (Omnibus, Metro, Taxi/Uber)");
 let mTipoHotel = prompt("En que tipo de alojamiento tenes pensado quedarte en estos días? (Hotel/Hostel/Otro");
-*/
-
+*/ 
 //Calculadora(mCantidadDias);
 
 
@@ -172,6 +168,8 @@ console.log(nuevoArrayViajes);
 
 //localStorage.clear();
 
+//#region Funciones
+
 function getLocalStorage(key){
     return JSON.parse(localStorage.getItem(key))
 }
@@ -182,21 +180,35 @@ function saveInLocalStorage(key,item){
 }
 
 function Saludo(){
-    let visual = document.createElement("ul")
+    /* let visual = document.createElement("ul") */
+
+    const pruebaDiv = document.getElementById('prueba');
+
+    /* pruebaDiv.innerHTML = `<h1>PRUEBA</h1>
+                        <p>Usuario: ${mPersona.nombre} </p>` */
 
     users.forEach(user => {
-    visual.innerHTML = `${visual.innerHTML}<li>
+    pruebaDiv.innerHTML = `${pruebaDiv.innerHTML}
                         <h3>  Usuario: ${user.nombre}</h3>
                         <h3> Apellido: ${user.apellido}</h3>
-                        </li>`
+                        <h3> ***********</h3>`
     })
 
-    document.body.appendChild(visual)
+    /* document.body.appendChild(visual) */
+}
+
+function Limpiar(){
+    const divbuttonlimpiar = document.getElementById('buttonlimpiar');
+    divbuttonlimpiar.innerHTML = `<button id="limpiar">Limpiar Consulta</button>`
 }
 
 function ValorizarEntidad(e){
     console.log(e.target.value)
 }
+
+//#region 
+
+
 
 let users = [];
 
@@ -213,24 +225,63 @@ apellido.addEventListener('change', ValorizarEntidad)
 let edad = document.querySelector('#edad')
 edad.addEventListener('change', ValorizarEntidad)
 
+let dni = document.querySelector('#dni')
+edad.addEventListener('change', ValorizarEntidad)
+
+let pais = document.querySelector('#pais')
+edad.addEventListener('change', ValorizarEntidad)
+
 let btnCargar = document.querySelector('#buttoncargar')
+
+class Persona {
+    constructor(nombre, apellido, edad, dni, pais) {
+        this.nombre = nombre.value;
+        this.apellido = apellido.value;
+        this.edad = edad.value;
+        this.dni = dni.value;
+        this.pais = pais.value;
+    }
+    
+        /* SaludarViajero = function (pNombre, pEdad) {
+            alert("Bienvenido " + pNombre);
+            alert("Los " + pEdad + " años, son la edad ideal para conocer nuestro planeta");
+        }
+    
+        Mensaje = function (pNombre) {
+            let mMsg =  pNombre + " Te vamos a ayudar a armar un presupuesto básico para orgaizar tu viaje";
+            alert(mMsg);
+            } */
+    }
+
+    //#region Eventos
 
 btnCargar.addEventListener('click', function(event)
     {
         event.preventDefault()
 
-        let user = {
-            nombre: nombre.value,
-            apellido: apellido.value,
-            edad: Number(edad.value)
-        }
+        const mPersona = new Persona(nombre, apellido, edad, dni, pais)
 
-        users.push(user)
+        users.push(mPersona)
         saveInLocalStorage('users', users)
 
         Saludo()
+        /* const pruebaDiv = document.getElementById('prueba');
+        pruebaDiv.innerHTML = `<h1>PRUEBA</h1>
+                                <p>Usuario: ${mPersona.nombre} </p>` */
+
+        Limpiar();
     }
 )
 
 
+let btnLimpiarConsulta = document.querySelector('#buttonlimpiar')
 
+btnLimpiarConsulta.addEventListener('change', function(event)
+    {
+        event.preventDefault()
+
+        localStorage.clear()
+    }
+)
+
+//#endregion
