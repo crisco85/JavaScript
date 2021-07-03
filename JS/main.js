@@ -279,9 +279,44 @@ let btnLimpiarConsulta = document.querySelector('#buttonlimpiar')
 btnLimpiarConsulta.addEventListener('change', function(event)
     {
         event.preventDefault()
-
         localStorage.clear()
     }
 )
 
 //#endregion
+
+
+/* Desafio - INCORPORAR JQUERY AL PROYECTO */ 
+
+class Viaje {
+    constructor(paisdestino, ciudad, cant_dias) {
+        this.paisdestino = paisdestino.value;
+        this.ciudad = ciudad.value;
+        this.cant_dias = cant_dias.value;
+    }
+}
+
+let viajes = [];
+viajes = getLocalStorage('viajes') || []
+console.log(viajes);
+
+let mPaisDestino = $('#paisdestino').on('change', ValorizarEntidad)
+let mCiudad = $('#ciudad').on('change', ValorizarEntidad)
+let mCant_dias = $('#cant_dias').on('change', ValorizarEntidad)
+
+$("#buttonmostrar").on('click', CargarViaje)
+
+function CargarViaje(e){
+    e.preventDefault()
+
+    const mViaje = new Viaje(paisdestino, ciudad, cant_dias)
+
+    viajes.push(mViaje)
+    saveInLocalStorage('viajes', viajes)
+
+    console.log(this);
+    $("#jQuery").append(`<div><h4> Pais de Destino: ${paisdestino.value}</h4>
+                        <h4>  Ciudad: ${ciudad.value}</h4>
+                        <h4> Cant. de Dias : $ ${cant_dias.value}</h4>
+                        </div>`)
+}
