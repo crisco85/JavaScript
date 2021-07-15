@@ -1,17 +1,3 @@
-/* Cotizador de presupuesto para viajeros */
-
-/* SaludarViajero();
-
-let mContinente = prompt("Cual es el principal continente en el cual esta interesado en viajar? (Europa / America / Asia / Africa / Oceania)");
-
-Mensaje(mNombre, mContinente);
-
-let mCantidadDias = Number(prompt("De cuantos dias seria tu viaje? "));  
-let mTipoTranporte = prompt("Cual seria tu principal medio de transporte? (Omnibus, Metro, Taxi/Uber)");
-let mTipoHotel = prompt("En que tipo de alojamiento tenes pensado quedarte en estos días? (Hotel/Hostel/Otro");
-*/ 
-//Calculadora(mCantidadDias);
-
 
 /*Funciones */
 /*
@@ -209,7 +195,6 @@ function ValorizarEntidad(e){
 //#region 
 
 
-
 let users = [];
 
 users = getLocalStorage('users') || []
@@ -289,7 +274,8 @@ btnLimpiarConsulta.addEventListener('change', function(event)
 /* Desafio - INCORPORAR JQUERY AL PROYECTO */ 
 
 class Viaje {
-    constructor(paisdestino, ciudad, cant_dias) {
+    constructor(continente, paisdestino, ciudad, cant_dias) {
+        this.continente = continente.value;
         this.paisdestino = paisdestino.value;
         this.ciudad = ciudad.value;
         this.cant_dias = cant_dias.value;
@@ -300,6 +286,7 @@ let viajes = [];
 viajes = getLocalStorage('viajes') || []
 console.log(viajes);
 
+let mContinente = $('#continente').on('change', ValorizarEntidad)
 let mPaisDestino = $('#paisdestino').on('change', ValorizarEntidad)
 let mCiudad = $('#ciudad').on('change', ValorizarEntidad)
 let mCant_dias = $('#cant_dias').on('change', ValorizarEntidad)
@@ -309,16 +296,49 @@ $("#buttonmostrar").on('click', CargarViaje)
 function CargarViaje(e){
     e.preventDefault()
 
-    const mViaje = new Viaje(paisdestino, ciudad, cant_dias)
+    const mViaje = new Viaje(continente, paisdestino, ciudad, cant_dias)
 
     viajes.push(mViaje)
     saveInLocalStorage('viajes', viajes)
 
     console.log(this);
-    $("#jQuery").append(`<div><h4> Pais de Destino: ${paisdestino.value}</h4>
+    $("#jQuery").append(`<div><h4>Continente: ${continente.value}</h4>
+                        <h4>Pais de Destino: ${paisdestino.value}</h4>
                         <h4>  Ciudad: ${ciudad.value}</h4>
                         <h4> Cant. de Dias : $ ${cant_dias.value}</h4>
                         </div>`)
+
+
+    /* Desafio - AJAX EN TU PROYECTO */ 
+    $.ajax({
+        method: 'GET',
+        url: '../JSON/data.json'
+        }).done((data)=> {
+            console.log(data);
+            GenerarMapa(data);
+        }).fail((error)=> {
+            console.log(error);
+        }).always(()=> {
+            console.log('imagenes cargadas');
+        });
+}
+
+/************* */ 
+/* Desafio - AJAX EN TU PROYECTO */ 
+
+function GenerarMapa(data){
+    console.log(data);
+
+    const divAjaxMapa = $('#AjaxMapa');
+    $(data).each( function(index, continente) {
+        divAjaxMapa.append(`
+              <div class="col" style="width: 40rem;">
+                    <h4><strong>${continente.Continente}</h4>
+                    <img class="card-img-top" src="${continente.Mapa}" alt="Card image cap">
+              </div>`
+
+        )
+    })
 }
 
 /************* */
