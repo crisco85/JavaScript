@@ -31,9 +31,11 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Pages/contacto.html">Contacto</a>
+                            <a class="nav-link" href="" id="ciudadesimperdibles">Ciudades Imperdibles</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="" id="experienciascompartidas">Experiencias Compartidas</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +62,8 @@
                         <input id="edad" type="number" placeholder="edad">
                         <input id="dni" type="number" placeholder="dni">
                         <input id="pais" type="text" placeholder="pais">
-                        <button id="buttoncargar">Cargar</button>
+                        <div><button id="buttoncargar">Cargar</button> </div>
+                        
                         <div id="buttonlimpiar"></div>
 
                         <div id="prueba"> </div>
@@ -72,14 +75,10 @@
                         <input id="paisdestino" type="text" placeholder="paisdestino">
                         <input id="ciudad" type="text" placeholder="ciudad">
                         <input id="cant_dias" type="number" placeholder="cant_dias">
-                        <button id="buttonmostrar">Mostrar Viaje</button>
-                        <div id="buttonlimpiar">
-                            
-                        </div>
+                        <div><button id="buttonmostrar">Mostrar Viaje</button></div>
+                        
 
                         <div id="jQuery"></div>
-
-                        <div id="AjaxMapa"></div>
 
                     </div>
                     <div class="col">
@@ -89,11 +88,28 @@
             </div>
         </form>
 
+        <div class="container">
+            <h2 id="nuestromundo"></h2>
+
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+
+                    <div id="AjaxMapa"></div>
+
+                </div>
+                <div class="col">
+        
+                </div>
+            </div>
+        </div>
+
 
 
 
         <div class="container">
-            <h2>Ciudades imperdibles</h2>
+            <h2 id="imperdibles">Ciudades imperdibles</h2>
 
             <div class="row">
               <div class="col">
@@ -136,7 +152,7 @@
         <section class="experiencias">
 
             <div class="container">
-                <h2>Experiencias compartidas</h2>
+                <h2 id="experiencias">Experiencias compartidas</h2>
 
                 <div class="row">
                     <div class="col-md-8 experiencias__descripcion">
@@ -181,29 +197,6 @@
             </div>  
 
         </section>
-        
-        <!-- <section class="paisesunicos">
-        
-            <div class="container px-lg-5">
-                <h2>Paises únicos</h2>
-
-                <div class="row mx-lg-n5">
-                    <div class="col py-3 px-lg-5 paisesunicos__videos">
-                        <h3><a href="Pages/paises.html">Turquia - Capadoccia</a></h3>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1qYumDtxVlQ" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                        gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="col py-3 px-lg-5 paisesunicos__videos">
-                        <h3><a href="Pages/paises.html">Jordania - Wadi Rum</a></h3>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/anUo681VeqU" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                        gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-          </div>
-
-        </section> -->
     
     </main>
         

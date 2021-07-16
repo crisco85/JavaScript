@@ -4,13 +4,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600;800&family=Boogaloo&family=Overlock:wght@400;700;900&display=swap");
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 /*1rem = 10px*/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 header {
   background: linear-gradient(to top, #fceabb, #f8b500);
@@ -18,67 +20,80 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .logo {
   display: flex;
   width: 150px;
   height: 75px;
-  margin: 5px 0 5px 15px; }
+  margin: 5px 0 5px 15px;
+}
 
 nav {
   color: #393264;
-  font-family: 'Overlock', cursive;
+  font-family: "Overlock", cursive;
   font-weight: 900;
-  font-style: normal; }
+  font-style: normal;
+}
 
 nav ul {
   display: flex;
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 nav ul li {
   margin: 15px 0;
-  padding: 15px; }
+  padding: 15px;
+}
 
 .nav-link {
   color: #0c332f;
   font-weight: 650;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+}
 
 main {
   background-color: #f2f3e9;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 h1 {
   color: #30303a;
   text-align: center;
   text-decoration-line: underline;
-  font-family: 'Baloo Thambi 2', cursive;
+  font-family: "Baloo Thambi 2", cursive;
   font-size: 3.7rem;
-  padding: 1rem; }
+  padding: 1rem;
+}
 
 h2 {
   color: #211f2e;
-  font-family: 'Baloo Thambi 2', cursive;
+  font-family: "Baloo Thambi 2", cursive;
   font-size: 3rem;
   margin: 15px;
   padding: 10px 10px 10px 5px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+}
 
 h2:hover {
-  font-size: 3.3rem; }
+  font-size: 3.3rem;
+}
 
 h3 {
-  color: #211f2e; }
+  color: #211f2e;
+}
 
 .inicio__ciudades article {
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .w-100 {
   width: 100vw;
-  height: 55vh; }
+  height: 55vh;
+}
 
 .experiencias .experiencias__imagen {
   align-content: center;
@@ -89,65 +104,79 @@ h3 {
   padding: 0.5rem;
   margin: 1rem;
   width: 30vw;
-  height: 30vh; }
+  height: 30vh;
+}
 
 .experiencias .experiencias__descripcion {
   text-align: center;
   align-items: center;
   justify-content: center;
   justify-items: center;
-  padding: 3rem; }
+  padding: 3rem;
+}
 
 .experiencias .experiencias__descripcion h3 {
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 .experiencias .experiencias__descripcion p {
   font-size: 1.2rem;
-  padding: 1.5rem; }
+  padding: 1.5rem;
+}
 
 .paisesunicos {
-  padding: 2rem; }
-  .paisesunicos .paisesunicos__videos {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin: 1rem;
-    justify-content: space-around; }
-  .paisesunicos .paisesunicos__videos h3 {
-    margin: 1.5rem;
-    font-size: medium; }
-  .paisesunicos a {
-    color: #211f2e; }
+  padding: 2rem;
+}
+.paisesunicos .paisesunicos__videos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+  justify-content: space-around;
+}
+.paisesunicos .paisesunicos__videos h3 {
+  margin: 1.5rem;
+  font-size: medium;
+}
+.paisesunicos a {
+  color: #211f2e;
+}
 
 ul {
-  color: #033d27; }
+  color: #033d27;
+}
 
 footer {
   background: linear-gradient(to bottom, #fceabb, #f8b500);
   text-align: center;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 footer ul {
   list-style-type: none;
   justify-content: space-between;
-  align-items: flex-end; }
+  align-items: flex-end;
+}
 
 footer ul li {
   display: inline-block;
   padding: 30px 0;
-  margin: 15px; }
+  margin: 15px;
+}
 
 .footertexto {
   color: ghostwhite;
   font-size: medium;
   font-weight: 600;
-  background-color: #f08c09; }
+  background-color: #f08c09;
+}
 
 span {
   font-size: 1.3rem;
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 form {
   display: flex;
@@ -155,186 +184,45 @@ form {
   justify-items: center;
   align-items: center;
   text-align: center;
-  width: 100%; }
-  form button {
-    background-color: #04130d;
-    color: white;
-    border-radius: 0.5rem;
-    padding: 5px 10px;
-    border: none;
-    margin: 1rem; }
-  form label {
-    font-size: 1.5rem; }
-  form input, form form textarea {
-    background-color: #31615b;
-    padding: 0.5rem;
-    border-radius: 0.7rem;
-    margin-left: 1.5rem;
-    color: #caf5f1; }
-  form div {
-    margin: 0.5rem; }
-  form .formtitulo {
-    margin: 2.5rem;
-    text-align: center; }
-  form .col-md-auto {
-    width: 100%;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    padding: 0.5rem;
-    margin: 0.5rem; }
-
-/* -----------------Paginas Paises----------------------------*/
-.paises h1 {
-  margin-bottom: 3rem; }
-
-.paises h2 {
-  font-size: 4rem;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.paises h3 {
-  font-size: 3rem;
-  font-weight: 600; }
-
-.paises h4 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600; }
-
-.tiulo {
-  margin: 2rem;
-  padding: 1.5rem; }
-
-.mapa {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.seccionvideo {
-  margin: 4rem; }
-  .seccionvideo img {
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem; }
-
-iframe {
   width: 100%;
-  height: 100%; }
+}
+form button {
+  background-color: #04130d;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 5px 10px;
+  border: none;
+  margin: 1rem;
+}
+form label {
+  font-size: 2rem;
+}
+form input,
+form form textarea {
+  background-color: #31615b;
+  padding: 0.75rem;
+  border-radius: 0.7rem;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  color: #f8f7f7;
+}
 
-.seccionmusica {
-  margin: 4rem; }
-  .seccionmusica img {
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem; }
-
-.bandera {
-  display: flex;
+form div {
+  margin: 0.5rem;
+}
+form .formtitulo {
+  margin: 2.5rem;
+  text-align: center;
+}
+form .col-md-auto {
+  width: 100%;
   justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 70%;
+  justify-items: center;
+  align-content: center;
   padding: 0.5rem;
-  margin: 1rem; }
+  margin: 0.5rem;
+}
 
-.seccionhistoriaydato {
-  margin: 4rem; }
-  .seccionhistoriaydato img {
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem; }
-
-.paises p {
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  color: #172c2c;
-  font-weight: 400;
-  margin: 2rem;
-  padding: 1rem; }
-
-/*--------FIN Pagina Paises-------------*/
-/*--------INICIO Pagina Continentes-------------*/
-article {
-  padding: 1.5rem; }
-
-.mapacontinente {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%; }
-
-.continentes h2 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  justify-items: center;
-  align-items: center;
-  font-size: 4rem; }
-
-.continentes h3 {
-  font-size: 3rem;
-  font-weight: 600; }
-
-.continentes h4 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600; }
-
-.continentes p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #172c2c;
-  font-weight: 400;
-  margin: 2rem; }
-
-.continentes .video {
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: space-evenly; }
-
-.historiaydatos {
-  padding: 2rem; }
-
-/*--------FIN Pagina Continentes-------------*/
-/*--------INICIO Pagina Ciudades-------------*/
-.hotel {
-  width: 80%;
-  height: 80%; }
-
-.ciudades h2 {
-  font-size: 4rem;
-  font-weight: 600;
-  margin: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; }
-
-.ciudades h3 {
-  font-size: 3rem;
-  font-weight: 600; }
-
-.ciudades h4 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600; }
-
-.ciudades p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #172c2c;
-  font-weight: 400;
-  margin: 2rem; }
-
-/*--------FIN Pagina Ciudades-------------*/
 /*--------INICIO Pagina Experiencias-------------*/
 .experiencia h2 {
   font-size: 4rem;
@@ -343,16 +231,19 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+}
 
 .experiencia h3 {
   font-size: 3rem;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 .experiencia h4 {
   text-align: center;
   font-size: 2.5rem;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 .experiencia p {
   text-align: center;
@@ -360,12 +251,13 @@ article {
   color: #172c2c;
   font-weight: 400;
   margin: 2.5rem;
-  padding: 1.5rem; }
+  padding: 1.5rem;
+}
 
 .seccionrecomendaciones img {
   width: 3rem;
   height: 3rem;
-  margin: 0.5rem; }
+  margin: 0.5rem;
+}
 
 /*--------FIN Pagina Experiencias-------------*/
-/*--------Inicio Media Querys----------*/

@@ -1,18 +1,6 @@
 
 /*Funciones */
-/*
-function SaludarViajero()
-{
-    alert("Bienvenido " + mNombre);
-    alert("Los " + mEdad + " años, son la edad ideal para conocer nuestro planeta");
-}
 
-function Mensaje(mNombre, mContinente)
-{
-    let mMsg =  mNombre + " Te vamos a ayudar a armar un presupuesto básico para orgaizar tu viaje a " + mContinente;
-    alert(mMsg);
-}
-*/
 
 /* 
 function Calculadora(mCantidadDias)
@@ -166,12 +154,7 @@ function saveInLocalStorage(key,item){
 }
 
 function Saludo(){
-    /* let visual = document.createElement("ul") */
-
     const pruebaDiv = document.getElementById('prueba');
-
-    /* pruebaDiv.innerHTML = `<h1>PRUEBA</h1>
-                        <p>Usuario: ${mPersona.nombre} </p>` */
 
     users.forEach(user => {
     pruebaDiv.innerHTML = `${pruebaDiv.innerHTML}
@@ -179,8 +162,6 @@ function Saludo(){
                         <h3> Apellido: ${user.apellido}</h3>
                         <h3> ***********</h3>`
     })
-
-    /* document.body.appendChild(visual) */
 }
 
 function Limpiar(){
@@ -226,19 +207,9 @@ class Persona {
         this.dni = dni.value;
         this.pais = pais.value;
     }
-    
-        /* SaludarViajero = function (pNombre, pEdad) {
-            alert("Bienvenido " + pNombre);
-            alert("Los " + pEdad + " años, son la edad ideal para conocer nuestro planeta");
-        }
-    
-        Mensaje = function (pNombre) {
-            let mMsg =  pNombre + " Te vamos a ayudar a armar un presupuesto básico para orgaizar tu viaje";
-            alert(mMsg);
-            } */
-    }
+}
 
-    //#region Eventos
+//#region Eventos
 
 btnCargar.addEventListener('click', function(event)
     {
@@ -258,15 +229,15 @@ btnCargar.addEventListener('click', function(event)
     }
 )
 
-
 let btnLimpiarConsulta = document.querySelector('#buttonlimpiar')
 
-btnLimpiarConsulta.addEventListener('change', function(event)
+btnLimpiarConsulta.addEventListener('click', function()
     {
-        event.preventDefault()
+        /* event.preventDefault() */
         localStorage.clear()
     }
 )
+
 
 //#endregion
 
@@ -308,6 +279,7 @@ function CargarViaje(e){
                         <h4> Cant. de Dias : $ ${cant_dias.value}</h4>
                         </div>`)
 
+    $("#nuestromundo").append(`<h2>Nuestro Mundo</h2>`)
 
     /* Desafio - AJAX EN TU PROYECTO */ 
     $.ajax({
@@ -315,7 +287,7 @@ function CargarViaje(e){
         url: '../JSON/data.json'
         }).done((data)=> {
             console.log(data);
-            GenerarMapa(data);
+            GenerarMapa(data)
         }).fail((error)=> {
             console.log(error);
         }).always(()=> {
@@ -332,13 +304,35 @@ function GenerarMapa(data){
     const divAjaxMapa = $('#AjaxMapa');
     $(data).each( function(index, continente) {
         divAjaxMapa.append(`
-              <div class="col" style="width: 40rem;">
-                    <h4><strong>${continente.Continente}</h4>
-                    <img class="card-img-top" src="${continente.Mapa}" alt="Card image cap">
-              </div>`
-
+        <div class="col" style="width: 40rem;">
+        <h4><strong>${continente.Continente}</h4>
+        <img class="card-img-top" src="${continente.Mapa}" alt="Card image cap">
+        </div>` 
         )
     })
 }
 
-/************* */
+/**************/
+
+
+/* ANIMACIONES Y TRANSICIONES */ 
+
+$("#ciudadesimperdibles").on('click', e => {
+    e.preventDefault();
+
+    $("html, body").animate({
+        scrollTop: $("#imperdibles").offset().top
+
+    }, 1500)
+})
+
+$("#experienciascompartidas").on('click', e => {
+    e.preventDefault();
+
+    $("html, body").animate({
+        scrollTop: $("#experiencias").offset().top
+
+    }, 1500)
+})
+
+/**************/
