@@ -1,10 +1,11 @@
 [
     {
-        "Continente": "Europa",
-        "Mapa": "https://p4.wallpaperbetter.com/wallpaper/441/574/425/space-light-night-lights-wallpaper-preview.jpg"
+        "Nombre": "Tierra1",
+        "Mapa": "https://www.foronuclear.org/wp-content/uploads/2010/06/planeta-Tierra-854x465.jpg"
     },
     {
-        "Continente": "America",
-        "Mapa": "https://media.istockphoto.com/photos/north-and-south-america-lights-map-at-night-view-from-outer-space-picture-id1159550630?k=6&m=1159550630&s=170667a&w=0&h=RfoIwViD3R1lPAx5Td-Xj7PEYt36EtlUTSmxnBPU-Cw="
+        "Nombre": "Tierra2",
+        "Mapa": "https://www.foronuclear.org/wp-content/uploads/2010/06/planeta-Tierra-854x465.jpg"
     }
+    
 ]

@@ -302,15 +302,22 @@ function GenerarMapa(data){
     console.log(data);
 
     const divAjaxMapa = $('#AjaxMapa');
-    $(data).each( function(index, continente) {
+    $(data).each( function(index, tierra) {
         divAjaxMapa.append(`
         <div class="col" style="width: 40rem;">
-        <h4><strong>${continente.Continente}</h4>
-        <img class="card-img-top" src="${continente.Mapa}" alt="Card image cap">
+        <h4><strong>${tierra.Nombre}</h4>
+        <img class="card-img-top" src="${tierra.Mapa}" alt="Card image cap">
         </div>` 
         )
     })
 }
+
+
+
+{/* <div class="col" style="width: 40rem;">
+        <h4><strong>${continente.Continente}</h4>
+        <img class="card-img-top" src="${continente.Mapa}" alt="Card image cap">
+        </div> */}
 
 /**************/
 
