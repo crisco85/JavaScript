@@ -158,10 +158,13 @@ function Saludo(){
 
     users.forEach(user => {
     pruebaDiv.innerHTML = `${pruebaDiv.innerHTML}
-                        <h3>  Usuario: ${user.nombre}</h3>
+                        <h3> Bienvenido!!!!!!</h3>
+                        <h3> Nombre: ${user.nombre}</h3>
                         <h3> Apellido: ${user.apellido}</h3>
+                        <h3> Te vamos a ayudar para que conozca el presupuesta estimados que deberias considerar para tus proximas vacaciones,
+                        por favor, completa los siguientes datos;</h3>
                         <h3> ***********</h3>`
-    })
+    }) 
 }
 
 function Limpiar(){
@@ -177,9 +180,7 @@ function ValorizarEntidad(e){
 
 
 let users = [];
-
 users = getLocalStorage('users') || []
-
 console.log(users);
 
 let nombre = document.querySelector('#nombre')
@@ -221,11 +222,10 @@ btnCargar.addEventListener('click', function(event)
         saveInLocalStorage('users', users)
 
         Saludo()
-        /* const pruebaDiv = document.getElementById('prueba');
-        pruebaDiv.innerHTML = `<h1>PRUEBA</h1>
-                                <p>Usuario: ${mPersona.nombre} </p>` */
 
         Limpiar();
+
+        btnCargar.remove();
     }
 )
 
@@ -245,39 +245,95 @@ btnLimpiarConsulta.addEventListener('click', function()
 /* Desafio - INCORPORAR JQUERY AL PROYECTO */ 
 
 class Viaje {
-    constructor(continente, paisdestino, ciudad, cant_dias) {
+    /* constructor(continente, paisdestino, ciudad, cant_dias) {
         this.continente = continente.value;
         this.paisdestino = paisdestino.value;
         this.ciudad = ciudad.value;
         this.cant_dias = cant_dias.value;
+    } */
+
+    constructor(nviaje, continente, paisdestino, ciudad, cant_dias) {
+        this.nviaje = nviaje.value;
+        this.continente = continente.value;
+        this.paisdestino = paisdestino.value;
+        this.ciudad = ciudad.value;
+        this.cant_dias = cant_dias.value;
+        /* this.precio = precio; */
     }
+
+   /*  getnViaje = function () {
+        return this.nviaje
+    }
+
+    getTotal = function (cant_dias) {
+        return this.precio * cant_dias
+    }
+
+    getCotizacion = function (cant_dias) {
+        return {
+            viaje: this,
+            pasajeros: cant_dias,
+            cotizacion: this.getTotal(cant_dias)
+        }
+    }
+
+    addToCotizador = function (cant_dias) {
+        mCotizador.push(this.getCotizacion(cant_dias))
+    } */
 }
 
 let viajes = [];
 viajes = getLocalStorage('viajes') || []
 console.log(viajes);
 
-let mContinente = $('#continente').on('change', ValorizarEntidad)
-let mPaisDestino = $('#paisdestino').on('change', ValorizarEntidad)
-let mCiudad = $('#ciudad').on('change', ValorizarEntidad)
-let mCant_dias = $('#cant_dias').on('change', ValorizarEntidad)
+/* let mCotizador = []
+mCotizador = getLocalStorage('mCotizador') || []
+console.log(mCotizador); */
+
+let nviaje = $('#nroviaje').on('change', ValorizarEntidad)
+let continente = $('#continente').on('change', ValorizarEntidad)
+let paisdestino = $('#paisdestino').on('change', ValorizarEntidad)
+let ciudad = $('#ciudad').on('change', ValorizarEntidad)
+let cant_dias = $('#cant_dias').on('change', ValorizarEntidad)
+/* let precio = function (continente) {
+    if((continente == America) || (continente == Europa))
+    {
+        precio = 1000;
+    }
+    else
+    {
+        precio = 2000;
+    }
+} */
 
 $("#buttonmostrar").on('click', CargarViaje)
+
 
 function CargarViaje(e){
     e.preventDefault()
 
-    const mViaje = new Viaje(continente, paisdestino, ciudad, cant_dias)
+    const mViaje = new Viaje(nviaje, continente, paisdestino, ciudad, cant_dias)
 
     viajes.push(mViaje)
     saveInLocalStorage('viajes', viajes)
+    /* viajes.forEach(viajes =>{
+        viajes.addToCotizador(mCant_dias)
+        console.log(mCotizador);
+                        
+        let nuevoArrayViajes = viajes.map(viaje => {                
+                            return viaje
+                        })
+                        
+        console.log(nuevoArrayViajes)
+    }) */
 
-    console.log(this);
-    $("#jQuery").append(`<div><h4>Continente: ${continente.value}</h4>
-                        <h4>Pais de Destino: ${paisdestino.value}</h4>
-                        <h4>  Ciudad: ${ciudad.value}</h4>
-                        <h4> Cant. de Dias : $ ${cant_dias.value}</h4>
+    /* console.log(this);
+    $("#jQuery").append(`<div><h4>Continente: ${mViaje.Continente.value}</h4>
+                        
+                        <h4>  Ciudad: ${mCiudad.value}</h4>
+                        <h4> Cant. de Dias : $ ${mCant_dias.value}</h4>
                         </div>`)
+  */
 
     $("#nuestromundo").append(`<h2>Nuestro Mundo</h2>`)
 
@@ -324,13 +380,22 @@ function GenerarMapa(data){
 
 /* ANIMACIONES Y TRANSICIONES */ 
 
+$("#cotizador").on('click', e => {
+    e.preventDefault();
+
+    $("html, body").animate({
+        scrollTop: $("#formulario").offset().top
+
+    }, 250)
+})
+
 $("#ciudadesimperdibles").on('click', e => {
     e.preventDefault();
 
     $("html, body").animate({
         scrollTop: $("#imperdibles").offset().top
 
-    }, 1500)
+    }, 500)
 })
 
 $("#experienciascompartidas").on('click', e => {
@@ -339,7 +404,7 @@ $("#experienciascompartidas").on('click', e => {
     $("html, body").animate({
         scrollTop: $("#experiencias").offset().top
 
-    }, 1500)
+    }, 500)
 })
 
 /**************/
