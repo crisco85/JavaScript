@@ -176,6 +176,7 @@ function ValorizarEntidad(e){
     console.log(e.target.value)
 }
 
+
 //#region 
 
 
@@ -252,16 +253,16 @@ class Viaje {
         this.cant_dias = cant_dias.value;
     } */
 
-    constructor(nviaje, continente, paisdestino, ciudad, cant_dias) {
+    constructor(nviaje, continente, paisdestino, ciudad, cant_dias, precio) {
         this.nviaje = nviaje.value;
         this.continente = continente.value;
         this.paisdestino = paisdestino.value;
         this.ciudad = ciudad.value;
         this.cant_dias = cant_dias.value;
-        /* this.precio = precio; */
+        this.precio = precio;
     }
 
-   /*  getnViaje = function () {
+    /* getnViaje = function () {
         return this.nviaje
     }
 
@@ -290,23 +291,52 @@ console.log(viajes);
 mCotizador = getLocalStorage('mCotizador') || []
 console.log(mCotizador); */
 
-let nviaje = $('#nroviaje').on('change', ValorizarEntidad)
-let continente = $('#continente').on('change', ValorizarEntidad)
-let paisdestino = $('#paisdestino').on('change', ValorizarEntidad)
-let ciudad = $('#ciudad').on('change', ValorizarEntidad)
-let cant_dias = $('#cant_dias').on('change', ValorizarEntidad)
-/* let precio = function (continente) {
-    if((continente == America) || (continente == Europa))
-    {
-        precio = 1000;
-    }
-    else
-    {
-        precio = 2000;
-    }
-} */
+let nviaje = document.querySelector('#nroviaje')
+nviaje.addEventListener('change', ValorizarEntidad)
 
-$("#buttonmostrar").on('click', CargarViaje)
+/* let continente = $('#continente').on('change', ValorizarEntidad) */
+
+let continente = document.querySelector('#continente')
+continente.addEventListener('change', ValorizarEntidad)
+
+let paisdestino = document.querySelector('#paisdestino')
+paisdestino.addEventListener('change', ValorizarEntidad)
+
+let ciudad = document.querySelector('#ciudad')
+ciudad.addEventListener('change', ValorizarEntidad)
+
+let cant_dias = document.querySelector('#cant_dias')
+cant_dias.addEventListener('change', ValorizarEntidad)
+
+let precio = 10
+console.log(precio)
+
+
+
+/* function CalcularPrecio(){
+    
+    precio = 1000 * cant_dias
+}
+ */
+   
+
+
+/* $("#buttonmostrar").on('click', CargarViaje) */
+
+let btnMostrar = document.querySelector('#buttonmostrar')
+
+
+btnMostrar.addEventListener('click', function(event)
+    {
+        event.preventDefault()
+
+        const mViaje = new Viaje(nviaje, continente, paisdestino, ciudad, cant_dias, precio)
+
+        viajes.push(mViaje)
+        saveInLocalStorage('viajes', viajes)
+
+    }
+)
 
 
 function CargarViaje(e){
@@ -338,7 +368,7 @@ function CargarViaje(e){
     $("#nuestromundo").append(`<h2>Nuestro Mundo</h2>`)
 
     /* Desafio - AJAX EN TU PROYECTO */ 
-    $.ajax({
+    /* $.ajax({
         method: 'GET',
         url: '../JSON/data.json'
         }).done((data)=> {
@@ -348,7 +378,7 @@ function CargarViaje(e){
             console.log(error);
         }).always(()=> {
             console.log('imagenes cargadas');
-        });
+        }); */
 }
 
 /************* */ 
