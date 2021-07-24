@@ -262,7 +262,7 @@ class Viaje {
         this.precio = precio;
     }
 
-    /* getnViaje = function () {
+    getnViaje = function () {
         return this.nviaje
     }
 
@@ -280,16 +280,16 @@ class Viaje {
 
     addToCotizador = function (cant_dias) {
         mCotizador.push(this.getCotizacion(cant_dias))
-    } */
+    }
 }
 
 let viajes = [];
 viajes = getLocalStorage('viajes') || []
 console.log(viajes);
 
-/* let mCotizador = []
+let mCotizador = []
 mCotizador = getLocalStorage('mCotizador') || []
-console.log(mCotizador); */
+console.log(mCotizador);
 
 let nviaje = document.querySelector('#nroviaje')
 nviaje.addEventListener('change', ValorizarEntidad)
@@ -334,6 +334,18 @@ btnMostrar.addEventListener('click', function(event)
 
         viajes.push(mViaje)
         saveInLocalStorage('viajes', viajes)
+
+        mViaje.addToCotizador(cant_dias);
+        console.log(mCotizador);
+        
+
+        let nuevoArrayViajes = viajes.map(viaje => {
+
+        return viaje
+        })
+
+        console.log(nuevoArrayViajes);
+ 
 
     }
 )
