@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kavivanar&family=Open+Sans:ital,wght@0,300;0,600;0,800;1,600&family=Yantramanav:wght@300;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600;800&family=Boogaloo&family=Overlock:wght@400;700;900&display=swap");
+
 html {
   font-size: 62.5%;
 }
@@ -83,6 +84,7 @@ h2:hover {
 
 h3 {
   color: #211f2e;
+  margin: 1rem;
 }
 
 .inicio__ciudades article {
@@ -174,7 +176,7 @@ footer ul li {
 }
 
 span {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -197,6 +199,7 @@ form button {
 form label {
   font-size: 2rem;
 }
+
 form input,
 form form textarea {
   background-color: #31615b;
@@ -205,6 +208,7 @@ form form textarea {
   margin-left: 1rem;
   margin-top: 0.3rem;
   color: #f8f7f7;
+  font-size: 1.1rem;
 }
 
 form div {
@@ -223,41 +227,55 @@ form .col-md-auto {
   margin: 0.5rem;
 }
 
-/*--------INICIO Pagina Experiencias-------------*/
-.experiencia h2 {
-  font-size: 4rem;
-  font-weight: 600;
+#saludo {
   margin: 2rem;
-  display: flex;
+  padding: 1rem;
+}
+
+#saludo h3 {
+  font-size: x-large;
+  font-weight: 800;
+}
+
+#saludo div p {
+  margin: 1.5rem;
+  font-size: medium;
+  font-weight: 600;
+}
+
+#recomendados {
+  background-color: #04130d;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 5px 10px;
+  border: none;
+  margin: 1rem;
   justify-content: center;
   align-items: center;
+}
+
+#lista-recomendaciones {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   text-align: center;
+  margin: 2rem;
 }
 
-.experiencia h3 {
-  font-size: 3rem;
-  font-weight: 600;
+#lista-recomendaciones {
+  margin: 1rem;
 }
 
-.experiencia h4 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
+#lista-recomendaciones .card {
+  margin: 1rem;
+  background-color: #f2f3e9;
+  border-radius: 1rem;
 }
 
-.experiencia p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #172c2c;
-  font-weight: 400;
-  margin: 2.5rem;
-  padding: 1.5rem;
+#lista-recomendaciones .card .imagen-destino {
+  margin: 1rem;
+  background-color: #f2f3e9;
+  border-radius: 1rem;
+  width: 45rem;
+  height: 30rem;
 }
-
-.seccionrecomendaciones img {
-  width: 3rem;
-  height: 3rem;
-  margin: 0.5rem;
-}
-
-/*--------FIN Pagina Experiencias-------------*/

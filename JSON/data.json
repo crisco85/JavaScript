@@ -1,11 +1,24 @@
 [
     {
-        "Nombre": "Tierra1",
-        "Mapa": "https://www.foronuclear.org/wp-content/uploads/2010/06/planeta-Tierra-854x465.jpg"
+        "destino": "Turquia",
+        "imagen": "https://www.hispanatolia.com/upload/filemanager/image/ESPANOL/turismo/2018/capadocia-turquia-globos-paisajes.jpg",
+        "descripcion": "Turquía es un país que refleja la personalidad de dos mundos opuestos: oriente y occidente. Estambul, su capital, es una de las ciudades más vibrantes y fascinantes del mundo, pero el resto del país es bastante desconocido para el viajero común",
+		"precio": "USD 1200",
+		"id": 1
     },
     {
-        "Nombre": "Tierra2",
-        "Mapa": "https://www.foronuclear.org/wp-content/uploads/2010/06/planeta-Tierra-854x465.jpg"
+        "destino": "Egipto",
+        "imagen": "https://viajes.nationalgeographic.com.es/medio/2019/04/15/istock-514316008_75bb6de4_1410x743.jpg",
+        "descripcion": "Las Pirámides de Egipto fueron los monumentos funerarios de los grandes faraones. Un legado que aún sigue despertando admiración",
+		"precio": "USD 1500",
+		"id": 2
+    },
+    {
+        "destino": "Grecia",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwWaZXdDHuX2FTTzVB-IsKf290IRJiyS2px8_5-AajexjnbZgxNgUraDrT9b321Kcb4Gg&usqp=CAU",
+        "descripcion": "La gran peculiaridad de Grecia son sus islas. ¡Hay más de 3000, entre las más bellas y únicas del mundo! Desde las Cícladas hasta las Islas Jónicas, ¡todas merecen unas vacaciones!",
+		"precio": "USD 1000",
+		"id": 3
     }
     
 ]
